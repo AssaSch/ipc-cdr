@@ -1,0 +1,17 @@
+genericHash.o: genericHash.c ../Includes/HashMapCdr.h \
+ ../../../include/genericList.h ../../../include/genericList_itr.h \
+ ../../../include/genericList.h ../../../include/list_functions.h \
+ ../../../include/genericList_itr.h
+DsManager.o: DsManager.c ../Includes/DsManager.h ../Includes/cdrParser.h \
+ ../Includes/HashMapCdr.h
+reportsGenerator.o: reportsGenerator.c ../Includes/reportsGenerator.h \
+ ../Includes/DsManager.h ../Includes/cdrParser.h ../Includes/HashMapCdr.h
+processor_main.o: processor_main.c ../Includes/fileManager.h \
+ ../Includes/cdrParser.h ../Includes/messenger.h ../Includes/cdrParser.h \
+ ../Includes/DsManager.h ../Includes/HashMapCdr.h
+genericDoubleList.o: ../../../advancedC/genericList/genericDoubleList.c \
+ ../../../include/genericList.h ../../../include/genericList_itr.h \
+ ../../../include/genericList.h ../../../include/list_functions.h \
+ ../../../include/genericList_itr.h
+messenger.o: ../generalModules/messenger.c ../Includes/messenger.h \
+ ../Includes/cdrParser.h

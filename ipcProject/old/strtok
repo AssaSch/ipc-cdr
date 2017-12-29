@@ -1,0 +1,61 @@
+Cdr* ParseCdr(char* _buffer)
+{
+	Cdr* cdr;
+	char* token;
+	
+	cdr = (Cdr*)calloc(1, sizeof(Cdr));
+	if (! cdr)
+	{
+		return NULL;
+	}
+ 	
+	/* imsi */
+	token = strtok(_buffer, "|");
+	strcpy(cdr->m_imsi, token);
+	
+	/* msisdn */	
+	token = strtok(NULL, "|");
+	strcpy(cdr->m_msisdn, token);
+
+	/* emei */		
+	token = strtok(NULL, "|");
+	
+	/* brandName */		
+	token = strtok(NULL, "|");
+	strcpy(cdr->m_brandName, token);
+	
+	/* operatorTuple */		
+	token = strtok(NULL, "|");
+	strcpy(cdr->m_operatorTuple, token);
+	
+	/* Call​ ​Type */		
+	token = strtok(NULL, "|");
+	strcpy(cdr->m_callType, token);
+      
+	/* Call​ ​date */		
+	token = strtok(NULL, "|");
+	
+	/* Call​ ​time */		
+	token = strtok(NULL, "|");
+	
+	/* Call​ ​Duration */		
+	token = strtok(NULL, "|");
+	cdr->m_callDuration = (size_t)strtol(token, NULL, DECIMAL);
+	
+	/* mb Download */		
+	token = strtok(NULL, "|");
+	cdr->m_mbDownload = (size_t)strtol(token, NULL, DECIMAL);
+	
+	/* mb Upload */
+	token = strtok(NULL, "|");
+	cdr->m_mbUpload = (size_t)strtol(token, NULL, DECIMAL);	
+	
+	/* party Operator */
+	token = strtok(NULL, "|");
+	strcpy(cdr->m_partyOperator, token);
+
+	/* party msisdn */
+	token = strtok(NULL, "|");
+
+	return cdr;
+}

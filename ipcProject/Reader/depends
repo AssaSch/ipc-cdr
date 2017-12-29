@@ -1,0 +1,4 @@
+fileManager.o: fileManager.c ../Includes/fileManager.h
+cdrParser.o: cdrParser.c ../Includes/cdrParser.h
+messenger.o: ../generalModules/messenger.c ../Includes/messenger.h \
+ ../Includes/cdrParser.h

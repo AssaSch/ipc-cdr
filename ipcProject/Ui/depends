@@ -1,0 +1,5 @@
+ui.o: ui.c ../Includes/ui.h ../Includes/processorCommands.h \
+ ../Includes/messenger.h ../Includes/messenger.h
+ui_main.o: ui_main.c ../Includes/ui.h ../Includes/messenger.h
+semaphores.o: ../generalModules/semaphores.c ../Includes/semaphores.h
+messenger.o: ../generalModules/messenger.c ../Includes/messenger.h

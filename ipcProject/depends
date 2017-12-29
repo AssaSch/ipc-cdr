@@ -1,0 +1,42 @@
+genericDoubleList.o: ../../advancedC/genericList/genericDoubleList.c \
+ ../../include/genericList.h ../../include/genericList_itr.h \
+ ../../include/genericList.h ../../include/list_functions.h \
+ ../../include/genericList_itr.h
+config.o: generalModules/config.c Includes/config.h
+semaphores.o: generalModules/semaphores.c Includes/semaphores.h
+messenger.o: generalModules/messenger.c Includes/messenger.h
+genericHash.o: Proccesor/genericHash.c Includes/HashMapCdr.h \
+ ../../include/genericList.h ../../include/genericList_itr.h \
+ ../../include/genericList.h ../../include/list_functions.h \
+ ../../include/genericList_itr.h
+DsManager.o: Proccesor/DsManager.c Includes/DsManager.h \
+ Includes/cdrParser.h Includes/HashMapCdr.h
+reportsGenerator.o: Proccesor/reportsGenerator.c \
+ Includes/reportsGenerator.h Includes/DsManager.h Includes/cdrParser.h \
+ Includes/HashMapCdr.h
+aggregator.o: Proccesor/aggregator.c Includes/aggregator.h \
+ Includes/DsManager.h Includes/cdrParser.h Includes/HashMapCdr.h \
+ Includes/messenger.h Includes/semaphores.h Includes/processorCommands.h \
+ Includes/reportsGenerator.h
+processor_main.o: Proccesor/processor_main.c Includes/messenger.h \
+ Includes/DsManager.h Includes/cdrParser.h Includes/HashMapCdr.h \
+ Includes/aggregator.h Includes/DsManager.h Includes/messenger.h \
+ Includes/semaphores.h Includes/reportsGenerator.h Includes/config.h
+processorCommand.o: Proccesor/processorCommand.c \
+ Includes/processorCommands.h Includes/messenger.h \
+ Includes/reportsGenerator.h Includes/DsManager.h Includes/cdrParser.h \
+ Includes/HashMapCdr.h Includes/semaphores.h
+reader_main.o: Reader/reader_main.c Includes/fileManager.h \
+ Includes/semaphores.h Includes/parseManager.h Includes/messenger.h \
+ Includes/config.h ../../include/genericList.h
+cdrParser.o: Reader/cdrParser.c Includes/cdrParser.h
+fileManager.o: Reader/fileManager.c Includes/fileManager.h \
+ Includes/semaphores.h
+parseManager.o: Reader/parseManager.c Includes/parseManager.h \
+ Includes/semaphores.h Includes/messenger.h Includes/fileManager.h \
+ Includes/cdrParser.h Includes/messenger.h
+ui.o: Ui/ui.c Includes/ui.h Includes/messenger.h Includes/semaphores.h \
+ Includes/processorCommands.h Includes/reportsGenerator.h \
+ Includes/DsManager.h Includes/cdrParser.h Includes/HashMapCdr.h
+ui_main.o: Ui/ui_main.c Includes/ui.h Includes/messenger.h \
+ Includes/semaphores.h

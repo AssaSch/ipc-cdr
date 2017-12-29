@@ -1,0 +1,10 @@
+[input]
+directory: newCdrFiles/
+
+[processing]
+directory: unfinishedCdrFiles/
+
+[output]
+directory: doneCdrFiles/
+
+processor number of threads: 5
