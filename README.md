@@ -6,4 +6,4 @@ and SMS messages with all relevant data.
 The processor will produce billing for subscribers and for third party operators
 that were involved in the service.
 
-for more information see: CDR-Processor-2017.v1.4.1.pdf file in repo
+for more information see: "CDR-Processor-2017.v1.4.1.pdf" file in repo
